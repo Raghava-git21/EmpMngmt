@@ -17,16 +17,16 @@ function App() {
       address: address,
       salary: salary
     }
-    let response = await axios.post('http://https://empmngmt.onrender.com:8080/emp/add', empDetails);
+    let response = await axios.post('https://empmngmt.onrender.com:8080/emp/add', empDetails);
     alert("Details sent successfully");
   }
   async function getAllUsers() {
-    let response = await axios.get('http://https://empmngmt.onrender.com:8080/emp/allUsers')
+    let response = await axios.get('https://empmngmt.onrender.com:8080/emp/allUsers')
 
     setUser(response.data);
   }
   async function deleteUserBYId(id) {
-    let response = await axios.delete(`http://https://empmngmt.onrender.com:8080/emp/delete/${id}`)
+    let response = await axios.delete(`https://empmngmt.onrender.com:8080/emp/delete/${id}`)
     getAllUsers();
     alert("User deleted successfully")
 
